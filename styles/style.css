@@ -1,4 +1,6 @@
 .content {
+    max-width: 1200px;
+    margin: 0 auto;
 
 }
 .content--wrapper {
@@ -6,10 +8,36 @@
 }
 
 .article {
+    display: flex;
+    column-gap:1em ;
+        
 
 }
 
 .article__body {
+    flex-grow : 1;
+}
+
+.article__header{
+    flex-shrink: 0;
+    align-content: center;
+    text-align: center;
+    align-self: flex-end;
 
 }
 
+.article__footer{
+    align-content: center;
+    order: 1;
+
+}
+
+.article::after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 80px;
+    background-color: #000;
+    flex-shrink: 0;
+    align-self: center;
+}
